@@ -1,0 +1,3 @@
+py -3 -m venv .venv
+seleccionar interprete 
+flask --debug run  

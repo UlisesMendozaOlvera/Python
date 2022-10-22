@@ -384,3 +384,72 @@ Estudiantes = [
 ]
 
 print(sorted(Estudiantes, key=lambda estudiante: estudiante[2], reverse=True))
+
+#Pide una cadena e indica si es un palíndromo o no.
+cadena1 = input("Dame una cadena: ")
+
+cadena_al_reves = cadena1[::-1]
+
+print(cadena_al_reves)
+
+if (cadena1 == cadena_al_reves):
+    print("Es palindromo")
+else:
+    print("No es palindromo")
+
+
+# Generar un rango desde 0 hasta la longitud de la cadena “Hola mundo”
+rango = list(range(0, len("Hola mundo")))
+
+print(rango)
+
+#Generar un rango de 10 a 0.
+rango = list(range(10, 0, -1))
+
+print(rango)
+
+# Mostrar los números pares entre 1 al 100.
+#1º forma
+print("1 forma")
+for i in range(1, 101):
+    if ((i % 2) == 0):
+        print(i)
+
+print("")
+
+#2º forma
+print("2 forma")
+for i in range(2, 101, 2):
+    print(i)
+
+#Mayoría absoluta
+
+
+def mayoria_absoluta(votos):
+    for voto in set(votos):
+        if votos.count(voto) > len(votos) // 2:
+            return voto
+    return None
+
+
+# Crea cuadrado
+"""Este ejercicio trata de poner en práctica tus habilidades con el lenguaje. Es muy sencillo. 
+Consiste en implementar una función cuadrado(n) que tome como argumento un número entero n 
+y genere un cuadrado de n x n formado, precisamente, por el número n."""
+
+#Opcion 1 
+def cuadrado(n):
+    return [[n] * n] * n
+
+#Opcion 2
+def cuadrado(n):
+    return [[n for _ in range(n)] for _ in range(n)]
+
+#Cuenta apariciones
+caracteres = {}
+cadena = input('Introduce una cadena > ')
+
+for c in cadena:
+    caracteres[c] = caracteres.get(c, 0) + 1
+
+print('\n'.join([f'{k}: {v}' for k, v in caracteres.items()]))
