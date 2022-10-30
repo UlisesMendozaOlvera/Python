@@ -1,0 +1,107 @@
+body {
+    text-align: center;
+    padding: 0 2em;
+    font-family: Montserrat, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: #444;
+    background: #eee;
+}
+h1 {
+    font-weight: normal;
+    letter-spacing: -1px;
+    color: #34495E;
+}
+h2{
+  
+    text-align: left;
+    font-size: x-large;
+    font-weight: normal;
+    letter-spacing: -1px;
+    color: #34495E;
+}
+.menu {
+     background-color: gainsboro;
+     color: black;
+     margin: auto;
+     width: 50%;
+     border: 10px solid lawngreen;
+     border-radius: 10px;
+     padding: 10px;
+ }
+
+.btnAgregar{
+    text-align: left;
+
+}
+.contenedor{
+ 
+    text-align: center;
+   
+    
+}
+form{
+        background-color: gainsboro;
+        color: black;
+        margin: auto;
+        width: 50%;
+        border: 10px solid lawngreen;
+        border-radius: 10px;
+        padding: 10px;
+}
+p{
+    
+        font-size: x-large;
+        font-weight: normal;
+        letter-spacing: -1px;
+        color: #34495E;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    color: black;
+    border-radius: .4em;
+    overflow: hidden;
+    margin: 1em 0;
+}
+table,
+th,
+td {
+    border: 1px solid white;
+    
+}
+th {
+    background-color: lightgreen;
+    
+    text-align: left;
+}
+th,
+td {
+    
+    padding: 15px;
+   
+  
+}
+tr:nth-child(even) {
+    background-color: gray;
+}
+tr:hover {
+    background-color: lightgreen;
+}
+
+a:link,
+a:visited {
+    background-color: white;
+    color: black;
+    border: 2px solid lightgreen;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover,
+a:active {
+    background-color: lightgreen;
+    color: white;
+}

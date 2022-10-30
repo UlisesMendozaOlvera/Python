@@ -1,9 +1,18 @@
+--------------------------------------------PostgreSQL-----------------------------------------------------
+instalr psycopg2
+--------------------------------------------Django---------------------------------------------------------
 Comandos de Proyecto 
 Iniciar el servidor - python manage.py runserver
 Crear una app - python manage.py startapp webapp
 Crear un Proyecto - django-admin startproject mainapp
-instalar psycopg2
 python manage.py showmigrations
 python manage.py migrade
 crea una migracion -  python manage.py makemigrations 
 Crea el super usuario - python manage.py createsuperuser
+
+instalar psycopg2
+--------------------------------------------Flask---------------------------------------------------------
+python -m pip install flask
+python -m pip install flask-sqlalchemy
+python -m pip install flask-migrate
+python -m pip install psycopg2

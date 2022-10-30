@@ -1,9 +1,7 @@
 import psycopg2 as bd
-import sys
-from psycopg2 import pool
 from logger_base import log
-
-
+from psycopg2 import pool
+import sys
 class Conexion:
     _DATABASE='test_db'
     _USERNAME='postgres'
@@ -13,6 +11,7 @@ class Conexion:
     _MIN_CON=1
     _MAX_CON=5
     _pool=None
+
     @classmethod
     def obtenerPool(cls):
         if cls._pool is None:
@@ -23,22 +22,24 @@ class Conexion:
                 return cls._pool
             except Exception as e:
                 log.error(f'Ocurrio un error en el pool {e}')
+                sys.exit()
         else:
             return cls._pool
     # end def
+
     @classmethod
-    def ObtenerConexion(cls):
-        conexion=cls.obtenerPool().getconn()
-        log.debug(f'Conexion obtenida: {conexion}')
+    def obtenerConexion(cls):
+        conexion = cls.obtenerPool().getconn()
+        log.debug(f'Conexión obtenida del pool: {conexion}')
         return conexion
     @classmethod
-    def LiberarConexion(cls,conexion):
-        cls.obtenerPool().putconn(conexion)
+    def liberarConexion(cls,conexion):
+        cls.obtenerPool().putconn(Conexion)
         log.debug(f'Conexion regresada : {conexion}')
     # end def
     @classmethod
-    def cerrarConexion(cls):
+    def cerrarConexiones(cls):
        cls.obtenerPool().closeall()
 if __name__=='__main__':
-    Conexion.ObtenerConexion()
-    Conexion.ObtenerCursor()
+    conexion1 = Conexion.obtenerConexion()
+    Conexion.liberarConexion(conexion1)

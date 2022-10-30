@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css' ) }}">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Listado de animals</h1>
+    <div class="btnAgregar">
+        <a href="{{url_for('agregarAnimal')}}">Agregar</a>
+    </div>
+    <div class="contenedor">
+        <table border="1" class="rwd-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Grupo al que pertenece</th>
+                    <th>Tipo de alimentacion</th>
+                    <th>Habitat</th>
+
+
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for animal in animales %}
+                <tr>
+                    <td>{{animal.id}}</td>
+                    <td>{{animal.nombre}}</td>
+                    <td>{{animal.edad}}</td>
+                    <td>{{animal.grupo_pertenece}}</td>
+                    <td>{{animal.tipo_alimentacion}}</td>
+                    <td>{{animal.habitat}}</td>
+
+                    <td><a href="verAnimal/{{animal.id}}">Ver</a></td>
+                    <td><a href="editarAnimal/{{animal.id}}">Editar</a></td>
+                    <td><a href="eliminarAnimal/{{animal.id}}">Eliminar</a></td>
+
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <a href="{{url_for('verObjetos')}}">Regresar al inicio</a>
+</body>
+
+</html>

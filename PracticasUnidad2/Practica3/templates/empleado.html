@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css' ) }}">
+
+    <title>Document</title>
+</head>
+<body>
+        <h1>Listado de Empleados</h1>
+        <div class="btnAgregar">
+            <a href="{{url_for('agregar')}}">Agregar</a>
+        </div>
+        <div class="contenedor">
+            <table border="1" class="rwd-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                        <th>Direccion</th>
+                        
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for empleado in empleados %}
+                    <tr>
+                        <td>{{empleado.id}}</td>
+                        <td>{{empleado.nombre}}</td>
+                        <td>{{empleado.apellido}}</td>
+                        <td>{{empleado.edad}}</td>
+                        <td>{{empleado.direccion}}</td>
+                      
+                        <td><a href="ver/{{empleado.id}}">Ver</a></td>
+                        <td><a href="editar/{{empleado.id}}">Editar</a></td>
+                        <td><a href="eliminar/{{empleado.id}}">Eliminar</a></td>
+        
+        
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <a href="{{url_for('verObjetos')}}">Regresar al inicio</a>
+</body>
+</html>
