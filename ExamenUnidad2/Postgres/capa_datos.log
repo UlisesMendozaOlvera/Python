@@ -1,0 +1,216 @@
+10:54:13 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+10:54:14 AM: DEBUG [conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001EAAF11CDF0>
+10:54:14 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001EAAF198150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+10:54:14 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+10:54:14 AM: ERROR [cursor_del_pool.py:19] Ocurrió una excepción, se hace rollback: 'Persona' object has no attribute 'Fecha_fin' <class 'AttributeError'> <traceback object at 0x000001EAAF1A3700>
+10:54:14 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001EAAF198150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+10:59:30 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+10:59:30 AM: DEBUG [conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x00000282A7D23AC0>
+10:59:30 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x00000282A7D48150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+10:59:30 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+10:59:30 AM: ERROR [cursor_del_pool.py:19] Ocurrió una excepción, se hace rollback: 'Persona' object has no attribute 'Fecha_fin' <class 'AttributeError'> <traceback object at 0x00000282A77E5CC0>
+10:59:30 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x00000282A7D48150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:01:00 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+11:01:00 AM: DEBUG [conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001C9A9C4BCD0>
+11:01:00 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001C9A9CC8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:01:00 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+11:01:00 AM: ERROR [cursor_del_pool.py:19] Ocurrió una excepción, se hace rollback: no existe la columna «nombre» en la relación «persona»
+LINE 1: INSERT INTO persona(Nombre, Edad, Correo) VALUES('bryan', '2...
+                            ^
+ <class 'psycopg2.errors.UndefinedColumn'> <traceback object at 0x000001C9A9CE9640>
+11:01:00 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001C9A9CC8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:04:01 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+11:04:01 AM: DEBUG [conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001EE9D2D7AC0>
+11:04:01 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001EE9D2F8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:04:01 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+11:04:01 AM: ERROR [cursor_del_pool.py:19] Ocurrió una excepción, se hace rollback: no existe la columna «nombre» en la relación «persona»
+LINE 1: INSERT INTO persona(Nombre, Edad, Correo) VALUES('bryan', '3...
+                            ^
+ <class 'psycopg2.errors.UndefinedColumn'> <traceback object at 0x000001EE9D319A00>
+11:04:01 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001EE9D2F8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:12:21 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+11:12:21 AM: DEBUG [conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000016F13F3FCD0>
+11:12:21 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x0000016F13FB8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:12:21 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+11:12:21 AM: ERROR [cursor_del_pool.py:19] Ocurrió una excepción, se hace rollback: no existe la columna «nombre» en la relación «persona»
+LINE 1: INSERT INTO persona (Nombre, Edad, Correo) VALUES('bryan', 2...
+                             ^
+ <class 'psycopg2.errors.UndefinedColumn'> <traceback object at 0x0000016F13FD9B40>
+11:12:21 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x0000016F13FB8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:18:08 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+11:18:08 AM: DEBUG [conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000002A452D8E620>
+11:18:08 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000002A452E08150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:18:08 AM: DEBUG [Persona_dao.py:32] persona insertado: 
+            Id : None, nombre: bryan,
+            edad: 33, correo: cdcs
+           
+        
+11:18:08 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+11:18:08 AM: DEBUG [cursor_del_pool.py:22] Commit de la transacción
+11:18:08 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000002A452E08150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:18:08 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+11:18:08 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000002A452E08150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:18:08 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+11:18:08 AM: ERROR [cursor_del_pool.py:19] Ocurrió una excepción, se hace rollback: no existe la columna «no_contrato» en la relación «contrato»
+LINE 1: INSERT INTO contrato(no_contrato, costo, fecha_inicio, fecha...
+                             ^
+ <class 'psycopg2.errors.UndefinedColumn'> <traceback object at 0x000002A452E2E040>
+11:18:08 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000002A452E08150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:19:21 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+11:19:21 AM: DEBUG [conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000027E146A3AC0>
+11:19:21 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x0000027E146C8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:19:21 AM: DEBUG [Persona_dao.py:32] persona insertado: 
+            Id : None, nombre: bryan,
+            edad: 33, correo: frsd
+           
+        
+11:19:21 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+11:19:21 AM: DEBUG [cursor_del_pool.py:22] Commit de la transacción
+11:19:21 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x0000027E146C8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:19:21 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+11:19:21 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x0000027E146C8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:19:21 AM: DEBUG [Contrato_dao.py:29] contrato insertado: 
+            Id : None, No contrato: 22,
+            costo: 23, Fecha de inicio: 12/9/22
+            Fecha fin : 12/10/22
+        
+11:19:21 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+11:19:21 AM: DEBUG [cursor_del_pool.py:22] Commit de la transacción
+11:19:21 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x0000027E146C8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:20:40 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+11:20:40 AM: DEBUG [conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x00000237981A3AC0>
+11:20:40 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x00000237981C8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:20:40 AM: DEBUG [Persona_dao.py:32] persona insertado: 
+            Id : None, nombre: bryan,
+            edad: 22, correo: bryan@gmail.com
+           
+        
+11:20:40 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+11:20:40 AM: DEBUG [cursor_del_pool.py:22] Commit de la transacción
+11:20:40 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x00000237981C8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:20:40 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+11:20:40 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x00000237981C8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:20:40 AM: DEBUG [Contrato_dao.py:29] contrato insertado: 
+            Id : None, No contrato: 2,
+            costo: 234, Fecha de inicio: 12/9/22
+            Fecha fin : 11/10/22
+        
+11:20:40 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+11:20:40 AM: DEBUG [cursor_del_pool.py:22] Commit de la transacción
+11:20:40 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x00000237981C8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:20:40 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+11:20:40 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x00000237981C8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:20:40 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+11:20:40 AM: ERROR [cursor_del_pool.py:19] Ocurrió una excepción, se hace rollback: el valor nulo en la columna «id_persona» de la relación «contrato_persona» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (null, null).
+ <class 'psycopg2.errors.NotNullViolation'> <traceback object at 0x00000237981EA240>
+11:20:40 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x00000237981C8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:23:31 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+11:23:31 AM: DEBUG [conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x00000161A4B32DA0>
+11:23:31 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x00000161A2813EF0; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:23:31 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+11:23:31 AM: ERROR [cursor_del_pool.py:19] Ocurrió una excepción, se hace rollback: el valor nulo en la columna «nombre» de la relación «persona» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (4, null, null, null).
+ <class 'psycopg2.errors.NotNullViolation'> <traceback object at 0x00000161A4D5C680>
+11:23:31 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x00000161A2813EF0; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:29:20 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+11:29:20 AM: DEBUG [conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000012A88177A60>
+11:29:20 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x0000012A88198150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:29:20 AM: DEBUG [Persona_dao.py:32] persona insertado: 
+            Id : None, nombre: bryan,
+            edad: 22, correo: bryan
+           
+        
+11:29:20 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+11:29:20 AM: DEBUG [cursor_del_pool.py:22] Commit de la transacción
+11:29:20 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x0000012A88198150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:29:20 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+11:29:20 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x0000012A88198150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:29:20 AM: DEBUG [Contrato_dao.py:29] contrato insertado: 
+            Id : None, No contrato: 22,
+            costo: 33, Fecha de inicio: 12/10/22
+            Fecha fin : 11/10/22
+        
+11:29:20 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+11:29:20 AM: DEBUG [cursor_del_pool.py:22] Commit de la transacción
+11:29:20 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x0000012A88198150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:29:20 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+11:29:20 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x0000012A88198150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:29:20 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+11:29:20 AM: ERROR [cursor_del_pool.py:19] Ocurrió una excepción, se hace rollback: el valor nulo en la columna «id_persona» de la relación «contrato_persona» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (null, null).
+ <class 'psycopg2.errors.NotNullViolation'> <traceback object at 0x0000012A881B6400>
+11:29:20 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x0000012A88198150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:32:46 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+11:32:46 AM: DEBUG [conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001F74F333A60>
+11:32:46 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001F74F358150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:32:46 AM: DEBUG [Persona_dao.py:32] persona insertado: 
+            Id : None, nombre: bryan,
+            edad: 22, correo: dcsdc
+           
+        
+11:32:46 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+11:32:46 AM: DEBUG [cursor_del_pool.py:22] Commit de la transacción
+11:32:46 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001F74F358150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:32:46 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+11:32:46 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001F74F358150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:32:46 AM: DEBUG [Contrato_dao.py:29] contrato insertado: 
+            Id : None, No contrato: 22,
+            costo: 33, Fecha de inicio: scs
+            Fecha fin : scs
+        
+11:32:46 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+11:32:46 AM: DEBUG [cursor_del_pool.py:22] Commit de la transacción
+11:32:46 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001F74F358150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:45:26 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+11:45:26 AM: DEBUG [conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000013F08EE3D90>
+11:45:26 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x0000013F08F08150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:45:26 AM: DEBUG [Persona_dao.py:32] persona insertado: 
+            Id : None, nombre: bryan,
+            edad: 22, correo: ssfdfs
+           
+        
+11:45:26 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+11:45:26 AM: DEBUG [cursor_del_pool.py:22] Commit de la transacción
+11:45:26 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x0000013F08F08150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:45:26 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+11:45:26 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x0000013F08F08150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:45:26 AM: DEBUG [Contrato_dao.py:29] contrato insertado: 
+            Id : None, No contrato: 344,
+            costo: 23, Fecha de inicio: 12/10/22
+            Fecha fin : 12/12/22
+        
+11:45:26 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+11:45:26 AM: DEBUG [cursor_del_pool.py:22] Commit de la transacción
+11:45:26 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x0000013F08F08150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:47:08 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+11:47:08 AM: DEBUG [conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000002AD7C093A60>
+11:47:08 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000002AD7C0B8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:47:08 AM: DEBUG [Persona_dao.py:32] persona insertado: 
+            Id : None, nombre: pedro,
+            edad: 33, correo: cdcs
+           
+        
+11:47:08 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+11:47:08 AM: DEBUG [cursor_del_pool.py:22] Commit de la transacción
+11:47:08 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000002AD7C0B8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:47:08 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+11:47:08 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000002AD7C0B8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:47:08 AM: DEBUG [Contrato_dao.py:29] contrato insertado: 
+            Id : None, No contrato: 32,
+            costo: 12, Fecha de inicio: 12/13/22
+            Fecha fin : 12/12/22
+        
+11:47:08 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+11:47:08 AM: DEBUG [cursor_del_pool.py:22] Commit de la transacción
+11:47:08 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000002AD7C0B8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:47:08 AM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+11:47:08 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000002AD7C0B8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:47:08 AM: DEBUG [contrato_persona_dao.py:29] contrato_persona insertado: 
+            id_persona : None, id_contrato: None,
+            
+        
+11:47:08 AM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+11:47:08 AM: DEBUG [cursor_del_pool.py:22] Commit de la transacción
+11:47:08 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000002AD7C0B8150; dsn: 'user=postgres password=xxx dbname=examenPostgres host=127.0.0.1 port=5432', closed: 0>
+11:47:08 AM: INFO [app.py:44]  insertado: 1 1 1

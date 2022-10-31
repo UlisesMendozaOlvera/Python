@@ -676,3 +676,25 @@ LINE 1: INSERT INTO zoologico(nombre, direccion, cantidad_animales, ...
 08:25:21 PM: DEBUG [cursor_del_pool.py:22] Commit de la transacción
 08:25:21 PM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x00000242B340C150; dsn: 'user=postgres password=xxx dbname=practica1 host=127.0.0.1 port=5432', closed: 0>
 08:25:21 PM: INFO [menu_app.py:141] Animal eliminado: 1
+07:50:41 PM: DEBUG [cursor_del_pool.py:10] Incio del método with __enter__
+07:50:41 PM: DEBUG [conexion.py:25] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x00000265FDDF0490>
+07:50:41 PM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x00000265FDE6C150; dsn: 'user=postgres password=xxx dbname=practica1 host=127.0.0.1 port=5432', closed: 0>
+07:50:41 PM: DEBUG [cursor_del_pool.py:16] Se ejecuta método __exit__
+07:50:41 PM: DEBUG [cursor_del_pool.py:22] Commit de la transacción
+07:50:41 PM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x00000265FDE6C150; dsn: 'user=postgres password=xxx dbname=practica1 host=127.0.0.1 port=5432', closed: 0>
+07:50:41 PM: INFO [menu_app.py:34] 
+            Id Empleado: 2, Nombre: ulises,
+            Apellido: mendoza, Edad: 23
+            Direccion: madero 232, Telefono: 8672563344
+        
+07:50:41 PM: INFO [menu_app.py:34] 
+            Id Empleado: 3, Nombre: pedro,
+            Apellido: avila, Edad: 23
+            Direccion: madero 23, Telefono: 23
+        
+07:50:41 PM: INFO [menu_app.py:34] 
+            Id Empleado: 6, Nombre: Eduardo,
+            Apellido: Marin, Edad: 22
+            Direccion: canseco 232, Telefono: 8674322211
+        
+07:50:59 PM: INFO [menu_app.py:60] Saliendo de la aplicación
