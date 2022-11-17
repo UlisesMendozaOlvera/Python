@@ -19,7 +19,7 @@ class personaDAO:
             personas = []
             for registro in registros:
                 persona = Persona(
-                    registro[0], registro[1], registro[2], registro[3], registro[4])
+                    registro[0], registro[1], registro[2], registro[3])
                 personas.append(persona)
             return personas
 

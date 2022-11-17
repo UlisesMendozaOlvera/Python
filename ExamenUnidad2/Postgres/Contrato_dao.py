@@ -17,7 +17,7 @@ class ContratoDAO:
             registros = cursor.fetchall()
             contratos = []
             for registro in registros:
-                contrato = Contrato(registro[0], registro[1], registro[2], registro[3], registro[4], registro[5])
+                contrato = Contrato(registro[0], registro[1], registro[2], registro[3], registro[4])
                 contratos.append(contrato)
             return contratos
 
