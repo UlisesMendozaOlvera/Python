@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block header %}
+    <h2>{% block title %}Agregar Empleado {% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+    <form action="" method="POST" enctype="multipart/form-data">
+        <label for="nombre">Nombre : </label>
+        <input type="text" name="nombre" id="nombre" " required>
+        <label for="apellido">Apellido : </label>
+        <input type="text" name="apellido" id="apellido"  required>
+        <label for="edad">Edad : </label>
+        <input type="text" name="edad" id="edad"  required>
+        <label for="direccion">Direccion : </label>
+        <input type="text" name="direccion" id="direccion"  required>
+
+        <label for="puestos">Puesto : </label>
+       
+        <input list="puestos" name="puestos">
+        <datalist id="puestos">
+        {% for p in p %}
+        <option value="{{p.nombre}}">
+        
+            {% endfor %}
+        </datalist>
+        <label for="zoologicos">Zoologico : </label>
+
+        <input list="zoologicos" name="zoologicos">
+        
+        <datalist id="zoologicos">
+            {% for zoo in zoo %}
+            <option value="{{zoo.nombre}}">
+        
+            {% endfor %}
+        </datalist>
+        
+        <input type="submit" , value="Guardar">
+    </form>
+    <div class="BotonBody">
+        <p><a href="{{url_for('appempleado.inicioAdministrador')}}">Regresar</a></p>
+    </div>
+{% endblock %}

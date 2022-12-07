@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% block header %}
+    <h2>{% block title %} Panel de Usuario {% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+    <div class="nav">
+        <div>
+    
+        </div>
+        <nav>
+            {% if g.user %}
+            <div class="menu">
+                <a href="{{url_for('zoo.agregarZoologico')}}">Agregar Zoológico</a>
+            </div>
+            <div class="menu">
+                <a href="{{url_for('animal.agregarAnimal')}}">Agregar Animales</a>
+            </div>
+           
+            <div class="menu">
+                <a href="{{ url_for('animal.download_report_animales') }}">Generar PDF Animales </a>
+            </div>
+            {% endif%}
+    
+        </nav>
+    
+    
+    
+    
+    </div>
+    <div class="contenedor">
+        <table border="1" class="rwd-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Foto</th>
+                    <th>Nombre</th>
+                    <th>Direccion</th>
+                   
+
+
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for zoologico in zoologico %}
+                <tr>
+                    <td>{{zoologico.id}}</td>
+                    <td><img src="data:image/png;base64,{{zoologico.rendered_data}}" alt="" width="50" height="50"></td>
+                    <td>{{zoologico.nombre}}</td>
+                    <td>{{zoologico.direccion}}</td>
+                    <td><a href="{{url_for('zoo.verZoologico',id=zoologico.id)}}">Ver</a></td>
+                    <td><a href="{{url_for('zoo.editarZoologico',id=zoologico.id)}}">Editar</a></td>
+                    <td><a href="{{url_for('zoo.eliminarZoologico',id=zoologico.id)}}">Eliminar</a></td>
+
+                   
+
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="contenedor">
+        <table border="1" class="rwd-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Grupo al que Pertenece</th>
+                    <th>Tipo de Alimentacion</th>
+                    <th>Habitat</th>
+                    <th>Cuidador</th>
+                    <th>Zoológico</th>
+    
+    
+    
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for animal in animal %}
+                <tr>
+                    <td>{{animal.id}}</td>
+                    <td>{{animal.nombre}}</td>
+                    <td>{{animal.edad}}</td>
+                    <td>{{animal.grupo_pertenece}}</td>
+                    <td>{{animal.tipo_alimentacion}}</td>
+                    <td>{{animal.habitat}}</td>
+                    <td>{{animal.cuidador_id}}</td>
+                    <td>{{animal.id_zoolgico}}</td>
+    
+    
+    
+                    <td><a href="{{url_for('animal.editarAnimal',id=animal.id)}}">Editar</a></td>
+                    <td><a href="{{url_for('animal.eliminarAnimal',id=animal.id)}}">Eliminar</a></td>
+    
+    
+    
+    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

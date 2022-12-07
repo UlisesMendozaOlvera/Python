@@ -1,0 +1,44 @@
+.img {
+    background-image: url('/static/img/travolta.gif');
+    background-size: 50% auto;
+    background-position: right;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+#fourohfour {
+    width: 100%;
+    height: 100%;
+    color: #0c455e;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fcfefc
+}
+
+#fourohfour .text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    position: absolute;
+    margin-left: 10%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#fourohfour .text h1 {
+    font-size: 40px;
+    padding-top: 230px;
+    
+    background-repeat: no-repeat;
+    background-position: center 120px;
+}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block header %}
+    <h2>{% block title %}Registrar usuario {% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+    <form action method="POST" enctype="multipart/form-data">
+        <div id="preview" class="styleImage"></div>
+        <label for="file">Seleccione una Foto</label>
+        <input type="file" name="file" id="file" accept=".jpg,.png,.jpeg">
+       
+        
+       
+        <label for="username">Nombre de usuario</label>
+        <input type="text" name="username" id="username" required>
+        <label for="password">Contraseña</label>
+        <input type="password" name="password" id="password" required>
+        <input type="submit", value="Registrar">
+    </form>
+   
+{% endblock %}

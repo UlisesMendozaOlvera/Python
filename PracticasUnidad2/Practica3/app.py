@@ -1,17 +1,44 @@
-from flask import Flask,request,jsonify 
+from flask import Flask,request,jsonify,redirect,url_for,render_template,Response
 from flask_cors import CORS
 from database import db 
 from encript import bcrypt
 from flask_migrate import Migrate
 from config import BaseConfig
-from models import User
+from models import Empleado, User
 from sqlalchemy import exc
 from functools import wraps
-from routes.user.user import appuser
+from routes.user.user import auth
+from routes.zoologico.zoologico import zoo
+from routes.empleado.empleado import appempleado
+from routes.animal.animal import animal
+
+
+
+
+
+
 #from routes.images.images import imageUser
 
 app=Flask(__name__)
-app.register_blueprint(appuser)
+
+@app.route('/')
+def index():
+    return redirect(url_for('auth.login'))
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html')
+
+
+
+app.register_blueprint(auth)
+app.register_blueprint(zoo)
+app.register_blueprint(appempleado)
+app.register_blueprint(animal)
+
+
+
+
 #app.register_blueprint(imageUser)
 
 app.config.from_object(BaseConfig)

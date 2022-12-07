@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block header %}
+    <h2>{% block title %}Editar Zoologico {% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+    <form action="" method="POST" enctype="multipart/form-data">
+        <label for="nombre">Nombre : </label>
+        <input type="text" name="nombre" id="nombre" value="{{zoologico.nombre}}" required>
+    
+        <label for="direccion">Direccion</label>
+        <input type="text" name="direccion" id="direccion" value="{{zoologico.direccion}}" required>
+    
+        <input type="submit" , value="Guardar">
+    </form>
+    <div class="BotonBody">
+        <p><a href="{{url_for('zoo.inicioZoologico')}}">Regresar</a></p>
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block header %}
+    <h2>{% block title %}Editar Puesto{% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+    <form action="" method="POST">
+       
+        <label for="nombre">Nombre del Puesto : </label>
+        <input type="text" name="nombre" id="nombre" value="{{empleado.nombre}}" required>
+       
+       
+        <input type="submit", value="Guardar">
+    </form>
+    <div class="BotonBody">
+        <p><a href="{{url_for('appempleado.administrador')}}">Regresar</a></p>
+    </div>
+{% endblock %}

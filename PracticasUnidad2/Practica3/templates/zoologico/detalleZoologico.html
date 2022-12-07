@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block header %}
+    <h2>{% block title %}Zoológicos {% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+<div class="grid-container">
+
+
+    <div class="grid-item item1">
+        <img src="data:image/png;base64,{{zoologico.rendered_data}}" alt="" >
+    </div>
+    <div class="grid-item item2">
+        
+            <h2>ID : {{zoologico.id}}</h2>
+       
+            <h2>Nombre: {{zoologico.nombre}}</h2>
+       
+            <h2>Direccion: {{zoologico.direccion}}</h2>
+       
+    </div>
+</div>
+   
+    <br>
+    <div class="BotonBody">
+        <p><a href="{{url_for('zoo.inicioZoologico')}}">Regresar</a></p>
+    </div>
+    
+{% endblock %}

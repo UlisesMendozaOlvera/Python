@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/rabbit_bunny.png')}}" type="image/x-icon">
+    
+    <title>{% block title %}{% endblock %}-Zoológico</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css' ) }}">
+</head>
+<body >
+    <header class="header">
+        <div class="nav">
+                <div>
+              
+                <h1>Zoológico</h1>  
+                </a>
+            </div>
+            <nav>
+                {% if g.user %}
+                <img src="data:image/png;base64,{{g.user.rendered_data}}" alt="" width="50" height="50">
+                <span>{{ g.user.email }}</span>
+                <a href="{{ url_for('auth.logout') }}">Cerrar Sesión</a>
+                {% else %}
+               
+                <a href="{{ url_for('auth.login') }}">Iniciar Sesión</a>
+                {% endif %}
+            </nav>
+        </div>
+        
+    </header>
+
+    <section>
+        <div class="content">
+            <header>{% block header %}{% endblock %}</header>
+
+            {% for message in get_flashed_messages() %}
+            <div class="flash"> {{ message }}</div>
+            {% endfor %}
+
+            {% block content %}{% endblock %}
+        </div>
+        
+    </section>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

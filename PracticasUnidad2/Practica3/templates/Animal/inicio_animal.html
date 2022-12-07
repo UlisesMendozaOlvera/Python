@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block header %}
+    <h2>{% block title %}Animales {% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+    <div class="BotonBody">
+        {% if g.user %}
+        <a href="{{url_for('animal.agregarAnimal')}}">Agregar</a>
+        {% endif%}
+    </div>
+    <div class="contenedor">
+        <table border="1" class="rwd-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Grupo al que Pertenece</th>
+                    <th>Tipo de Alimentacion</th>
+                    <th>Habitat</th>
+                    <th>Cuidador</th>
+                    <th>Zoológico</th>
+
+
+                    
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for animal in animal %}
+                <tr>
+                    <td>{{animal.id}}</td>
+                    <td>{{animal.nombre}}</td>
+                    <td>{{animal.edad}}</td>
+                    <td>{{animal.grupo_pertenece}}</td>
+                    <td>{{animal.tipo_alimentacion}}</td>
+                    <td>{{animal.habitat}}</td>
+                    <td>{{animal.cuidador_id}}</td>
+                    <td>{{animal.id_zoolgico}}</td>
+
+
+                   
+                    <td><a href="{{url_for('aniaml.editarAnimal',id=animal.id)}}">Editar</a></td>
+                    <td><a href="{{url_for('animal.eliminarAnimal',id=animal.id)}}">Eliminar</a></td>
+
+                   
+
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

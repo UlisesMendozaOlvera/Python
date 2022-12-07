@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block header %}
+    <h2>{% block title %}Editar Zoologico {% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+<form action="" method="POST" enctype="multipart/form-data">
+    <label for="nombre">Nombre : </label>
+    <input type="text" name="nombre" id="nombre"  value="{{animal.nombre}}" required>
+    <label for=" edad">Edad : </label>
+    <input type="text" name="edad" id="edad" value="{{animal.edad}}" required>
+    <label for="grupo_pertenece">Grupo al que pertenece : </label>
+    <input list="grupo_pertenece" name="grupo_pertenece" value="{{animal.grupo_pertenece}}" >
+    <datalist id="grupo_pertenece">
+        <option value="Mamíferos">
+        <option value="Aves">
+        <option value="Reptiles">
+        <option value="Ranas y Sapos">
+        <option value="Peces">
+        <option value="Ciempiés y milpés">
+        <option value="Arañas y alacranes">
+        <option value="Insectos">
+        <option value="Cangrejos y camarones">
+        <option value="Estrellas y erizos">
+        <option value="Lombrices y gusanos marinos">
+    </datalist>
+
+    <label for="tipo_alimentacion">Tipo de Alimentacion : </label>
+
+    <input list="tipo_alimentacion" name="tipo_alimentacion" value="{{animal.tipo_alimentacion}}">
+    <datalist id="tipo_alimentacion">
+        <option value="Herbívoros">
+        <option value="Carnívoros">
+        <option value="Omnívoro">
+    </datalist>
+    <label for="habitat">Habitat : </label>
+
+    <input list="habitat" name="habitat" value="{{animal.habitat}}">
+
+    <datalist id="habitat">
+        <option value="Aeroterrestres">
+        <option value="Terrestres">
+        <option value="Acuaticos">
+    </datalist>
+    <label for="cuidador">Cuidador : </label>
+
+    <input list="cuidador" name="cuidador" value="{{animal.cuidador_id}}">
+
+    <datalist id="cuidador">
+        {% for emp in emp %}
+        <option value="{{emp.nombre}}">
+
+            {% endfor %}
+    </datalist>
+    <label for="zoologicos">Zoológico : </label>
+
+    <input list="zoologicos" name="zoologicos" value="{{animal.id_zoolgico}}">
+
+    <datalist id="zoologicos">
+        {% for zoo in zoo %}
+        <option value="{{zoo.nombre}}">
+
+            {% endfor %}
+    </datalist>
+    <input type="submit" , value="Guardar">
+</form>
+    <div class="BotonBody">
+        <p><a href="{{url_for('zoo.inicioZoologico')}}">Regresar</a></p>
+    </div>
+{% endblock %}

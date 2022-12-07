@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block header %}
+    <h2>{% block title %}Editar Zoologico {% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+    <form action="" method="POST">
+       
+        <label for="nombre">Nombre : </label>
+        <input type="text" name="nombre" id="nombre" value="{{empleado.nombre}}" required>
+        <label for="apellido">Apellido : </label>
+        <input type="text" name="apellido" id="apellido" value="{{empleado.apellido}}" required>
+        <label for="edad">Edad : </label>
+        <input type="text" name="edad" id="edad" value="{{empleado.edad}}" required>
+        <label for="direccion">Direccion</label>
+        <input type="text" name="direccion" id="direccion" value="{{empleado.direccion}}" required>
+        <label for="puestos">Puesto :</label>
+        <input list="puestos" name="puestos" id="puestos" value="{{puestos.nombre_puesto}}">
+        <datalist id="">
+            {% for puesto in puesto %}
+            <option value="{{puesto.nombre_puesto}}">
+            
+            {% endfor %}
+        </datalist>
+        <label for="zoologicos">Zoológico : </label>
+
+        <input list="zoologicos" name="Zoologicos" id="Zoologicos" value="{{zoologicos.nombre}}">
+        <datalist id="">
+            {% for zoologico in zoologico %}
+            <option value="{{zoologico.nombre}}">
+          
+            {% endfor %}
+        </datalist>
+       
+        <input type="submit", value="Guardar">
+    </form>
+    <div class="BotonBody">
+        <p><a href="{{url_for('appempleado.inicioAdministrador')}}">Regresar</a></p>
+    </div>
+{% endblock %}
